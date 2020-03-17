@@ -10,6 +10,7 @@ function useCustomInput(defaultValue = '') {
 
     return {
         forInputTag: {
+            placeholder: "Moscow, New York, etc...",
             value,
             onChange: event => {
                 setValue(event.target.value);
