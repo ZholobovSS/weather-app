@@ -1,0 +1,316 @@
+
+.cloud {
+    box-shadow: 0 0 5px rgba(0,0,0,.15);
+    border-radius: 100rem;
+    position: absolute;
+    background: var(--cloudColor);
+    opacity: var(--cloudOpacity);
+    backdrop-filter: blur(2px);
+    z-index: 10;
+    right: 100%;
+  }
+  
+  .goRain .cloud,
+  .goSnow .cloud,
+  .goRain .cloud:before,
+  .goSnow .cloud:before,
+  .goRain .cloud:after,
+  .goSnow .cloud:after{
+    background: var(--cloudRainColor);
+  }
+  
+  .goCloud .cloud.cloud--normal {
+    animation: cloud 20s linear infinite;
+  }
+  
+  .goCloud .cloud.cloud--normal:nth-of-type(even) {
+    animation: cloud 17s linear infinite 2s;
+  }
+  
+  .goCloud .cloud.cloud--small{
+    animation: cloud 12s linear infinite;
+  }
+  .goCloud .cloud.cloud--small:nth-of-type(even) {
+    animation: cloud 14s linear infinite 1s;
+  }
+  .goCloud .cloud.cloud--big {
+    animation: cloud 25s linear infinite;
+  }
+  
+  .goCloud .cloud.cloud--big:nth-of-type(odd) {
+    animation: cloud 23s linear infinite 4s;
+  }
+  
+  .cloud.cloud--normal {
+    width: var(--cloudWidth);
+    height: var(--cloudHeight);
+    top: 70%;
+  }
+  
+  .cloud.cloud--normal:nth-of-type(even) {
+    top: 75%;
+  }
+  
+  .cloud.cloud--small {
+    width: var(--cloudSmallWidth);
+    height: var(--cloudSmallHeight);
+    top: 80%;
+  }
+  
+  .cloud.cloud--small:nth-of-type(even) {
+    top: 85%;
+  }
+  
+  .cloud.cloud--big {
+    width: var(--cloudBigWidth);
+    height: var(--cloudBigHeight);
+    top: 30%;
+  }
+  
+  .cloud--big:nth-of-type(odd) {
+    top: 40%;
+  }
+  
+  .cloud:before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-top: 1px solid #cccccc;
+    background: var(--cloudColor);
+    border-radius: 50%;
+    top: -100%;
+    left: 10%;
+  }
+  
+  .cloud.cloud--normal:before {
+    width: calc( var(--cloudHeight) * 2 );
+    height: calc( var(--cloudHeight) * 2 );
+  }
+  
+  .cloud.cloud--small:before {
+    width: calc( var(--cloudSmallHeight) * 2 );
+    height: calc( var(--cloudSmallHeight) * 2 );
+  }
+  
+  .cloud.cloud--big:before {
+    width: calc( var(--cloudBigHeight) * 2 );
+    height: calc( var(--cloudBigHeight) * 2 );
+  }
+  
+  .cloud:after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-top: 1px solid #cccccc;
+    background: var(--cloudColor);
+    border-radius: 50%;
+    top: -50%;
+    right: 7%;
+  }
+  
+  .cloud.cloud--normal:after {
+    width: calc( var(--cloudWidth) * .4 );
+    height: calc( var(--cloudWidth) * .4 );
+  }
+  
+  .cloud.cloud--small:after {
+    width: calc( var(--cloudSmallWidth) * .4 );
+    height: calc( var(--cloudSmallWidth) * .4 );
+  }
+  
+  .cloud.cloud--big:after {
+    width: calc( var(--cloudBigWidth) * .4 );
+    height: calc( var(--cloudBigWidth) * .4 );
+  }
+  
+  .rain, .snow {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: calc( var(--visualBlockSize) / 3 );
+    bottom: calc( var(--visualBlockSize) / -3 );
+    display: none;
+  }
+  
+  .goRain .rain, 
+  .goSnow .snow {
+    display: block;
+  }
+  
+  .snowflake {
+    color: white;
+    position: absolute;
+    animation: snow 10s linear infinite;
+    opacity: 0;
+  }
+  
+  .snowflake:nth-of-type(n+2){
+    left: 20%;
+    animation: snow 10s linear infinite .75s;
+  }
+  
+  .snowflake:nth-of-type(n+3){
+    left: 40%;
+    animation: snow 10s linear infinite 2s;
+  }
+  
+  .snowflake:nth-of-type(n+4){
+    left: 60%;
+    animation: snow 10s linear infinite 1.25s;
+  }
+  
+  .snowflake:nth-of-type(n+5){
+    left: 80%;
+    animation: snow 10s linear infinite 2.75s;
+  }
+  
+  .snowflake:nth-of-type(n+6){
+    left: 20%;
+    animation: snow 10s linear infinite 3.75s;
+  }
+  
+  .snowflake:nth-of-type(n+7){
+    left: 40%;
+    animation: snow 10s linear infinite 3.5s;
+  }
+  
+  .snowflake:nth-of-type(n+8){
+    left: 60%;
+    animation: snow 10s linear infinite 4.5s;
+  }
+  
+  .drop {
+    width: 2px;
+    height: 12px;
+    background: var(--rainBg);
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .drop--1 {
+    animation: rain 5s linear infinite;
+    left: 0;
+  }
+  
+  .drop--2 {
+    animation: rain 6s linear infinite .3s;
+    left: 10%;
+  }
+  
+  .drop--3 {
+    animation: rain 7s linear infinite .1s;
+    left: 20%;
+  }
+  
+  .drop--4 {
+    animation: rain 4s linear infinite .7s;
+    left: 30%;
+  }
+  
+  .drop--5 {
+    animation: rain 5s linear infinite .15s;
+    left: 50%;
+  }
+  
+  .drop--6 {
+    animation: rain 7s linear infinite .55s;
+    left: 60%;
+  }
+  
+  .drop--7 {
+    animation: rain 8s linear infinite 2s;
+    left: 70%;
+  }
+  
+  .drop--8 {
+    animation: rain 5s linear infinite 1s;
+    left: 80%;
+  }
+  
+  .drop--9 {
+    animation: rain 7s linear infinite .1s;
+    left: 90%;
+  }
+  
+  .drop--10 {
+    animation: rain 3s linear infinite .15s;
+    left: 98%;
+  }
+
+
+@keyframes cloud {
+    from,to {
+      transform: translateX( 0 );
+      opacity: var(--cloudOpacity);
+    }
+  
+    95% { 
+      transform: translateX( calc( var(--cloudAnimationWidth) + 100% ) );
+      opacity: var(--cloudOpacity);
+    }
+    96% {
+      transform: translateX( calc( var(--cloudAnimationWidth) + 100% ) );
+      opacity: 0;
+    }
+    97% {
+      transform: translateX( 0 );
+      opacity: 0;
+    }
+    98% {
+      transform: translateX( 0 );
+      opacity: var(--cloudOpacity);
+    }
+  }
+  
+  @keyframes rain {
+    from,to {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    45% {
+      transform: translateY( calc( var(--visualBlockSize) / 6 ) );
+      opacity: 1;
+    }
+    90% {
+      transform: translateY( calc( var(--visualBlockSize) / 3 ) );
+      opacity: 0;
+    }
+    91%,98% {
+      transform: translateY(-10%);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes snow {
+    from,to {
+      transform: translateY(0) translateX(0);
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    
+    20% {
+       transform: translateY( calc( var(--visualBlockSize) / 12 ) ) translateX(4px);
+    }
+    
+    45% {
+      transform: translateY( calc( var(--visualBlockSize) / 6 ) ) translateX(-4px);
+      opacity: 1;
+    }
+    
+    70% {
+      transform: translateY( calc( var(--visualBlockSize) / 4.5 ) ) translateX(4px);
+    }
+    90% {
+      transform: translateY( calc( var(--visualBlockSize) / 3 ) ) translateX(-4px);
+      opacity: 0;
+    }
+    91%,98% {
+      transform: translateY(-10%);
+      opacity: 0;
+    }
+  }

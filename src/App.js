@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useReducer } from 'react'
+import Visual from './components/Visual/Visual'
+import Context from './components/Context'
+import Information from './components/Inoformation/Information'
+import Reducer from './reducer'
+import { getWeatherData } from './reducer'
+import './App.css'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [state, dispatch] = useReducer(Reducer, {
+        weather: {},
+        correctCity: true,
+    })
+
+    return (
+        <Context.Provider value={{ dispatch, getWeatherData }} >
+            <div className="weather clearSky" >
+                <Visual
+                    correctCity={state.correctCity}
+                    dayPercent={state.dayPercent}
+                    info={state.weather}
+                    visual={state.visual}
+                />
+                <Information city={state.city}
+                    info={state.weather}
+                /> </div>
+        </Context.Provider>
+    );
 }
 
 export default App;

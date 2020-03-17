@@ -1,0 +1,33 @@
+.weather {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    min-height: 66vh;
+    position: relative;
+  }
+  
+  .clearSky {
+    position: relative;
+    background: linear-gradient(to right, 
+      #08183a, 
+      #152852, 
+      #4b3d60,
+      #fd5e53,
+      #fc9c54, 
+      #87A7D6, 
+      #87A7D6, 
+      #87A7D6,
+      #87A7D6,
+      #fc9c54,
+      #fd5e53,
+      #4b3d60,
+      #152852, 
+      #08183a
+      );
+      background-size: 2800% 2800%;
+      background-position: 0% 50%;
+      transition: all 1s ease-in-out;
+      
+  }
+  

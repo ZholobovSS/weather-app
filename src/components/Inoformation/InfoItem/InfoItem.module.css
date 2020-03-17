@@ -1,0 +1,22 @@
+.item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.icon {
+    margin-right: 1.5rem;
+}
+
+.wrValue {
+    position: relative;
+    flex: 1 0 auto;
+}
+
+.value {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 1.25rem;
+}

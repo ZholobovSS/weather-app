@@ -1,0 +1,24 @@
+.information {
+    display: flex;
+    flex-flow: column;
+    min-height: 37vh;
+    align-items: center;
+    padding: 2rem;
+}
+
+.city {
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem 1rem 2rem;
+}
+
+.wr {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    max-width: 40rem;
+    width: 100%;
+    align-items: center;
+    grid-auto-flow: column;
+}
+  
