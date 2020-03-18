@@ -3,7 +3,7 @@ import Visual from './components/Visual/Visual'
 import Context from './components/Context'
 import Information from './components/Inoformation/Information'
 import Reducer from './reducer'
-import { getWeatherData } from './reducer'
+import { getWeatherData } from './actions'
 import './App.css'
 
 function App() {
